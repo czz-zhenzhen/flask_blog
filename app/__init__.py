@@ -18,5 +18,8 @@ def create_app():
     # 讲topic蓝图新恒旭与app关联到一起
     from .topic import topic as topic_blueprint
     app.register_blueprint(topic_blueprint)
+    # 讲user蓝图新恒旭与app关联到一起
+    from . users import users as users_blueprint
+    app.register_blueprint(users_blueprint)
     # 创建好的程序实例返回
     return app
